@@ -9,3 +9,7 @@ In `test_helper.rb` or any particular test file:
     require 'test_unit_ext'
 
 If you are using Mocha, be sure to `require` it before TestUnitExt.
+
+## Credits
+
+Written by [Roman Le Négrate](http://roman.flucti.com) ([contact](mailto:roman.lenegrate@gmail.com)). Released under the MIT license: see the `LICENSE` file.
