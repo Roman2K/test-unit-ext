@@ -76,12 +76,6 @@ module TestUnitExt
       return record
     end
     
-    #######################
-    #  For assert_queries
-    #######################
-    
-
-    
     # Extracted from activerecord/test/cases/helper.rb
     ActiveRecord::Base.connection.class.class_eval do
       IGNORED_SQL = [/^PRAGMA/, /^SELECT currval/, /^SELECT CAST/, /^SELECT @@IDENTITY/, /^SELECT @@ROWCOUNT/, /^SHOW FIELDS/]
