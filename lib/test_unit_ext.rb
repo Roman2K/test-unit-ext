@@ -1,4 +1,19 @@
 module TestUnitExt
+  # Same as the stock equivalent, with the addition of the message being batched
+  # against the exception raised within the block.
+  #
+  # Messages can be matched in a strict manner:
+  #
+  #   assert_raise(RuntimeError, "the message") do
+  #     raise "the  message"
+  #   end
+  #
+  # Or loosely:
+  #
+  #   assert_raise(ArgumentError, /wrong number of arguments/) do
+  #     "hello".gsub(/e/)
+  #   end
+  #
   def assert_raise(exception_class, message=nil)
     begin
       yield
@@ -40,6 +55,7 @@ module TestUnitExt
   end
   
   if defined?(ActiveRecord)
+    # Details in the {introduction article}[http://roman.flucti.com/painless-record-creation-with-activerecord].
     def insert!(model, attributes={})
       attributes = attributes.stringify_keys
       begin

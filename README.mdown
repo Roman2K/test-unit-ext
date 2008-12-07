@@ -1,0 +1,11 @@
+# TestUnitExt
+
+Helper methods for `Test::Unit::TestCase`. See the documentation of each method for a description and usage examples.
+
+## Usage
+
+In `test_helper.rb` or any particular test file:
+
+    require 'test_unit_ext'
+
+If you are using Mocha, be sure to `require` it before TestUnitExt.
