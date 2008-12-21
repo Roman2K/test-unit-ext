@@ -19,14 +19,12 @@ module TestUnitExt
       yield
     rescue => error
     end
-
     exc_expected_msg = message ? ": #{message.inspect}" : ''
-    assertion_message = "expected to raise <#{exception_class}#{exc_expected_msg}> but raised #{error.inspect}"
+    assertion_message = "expected to raise <#{exception_class}#{exc_expected_msg}> but raised #{error.inspect}\n#{(error.backtrace || []).join("\n").gsub(/^/, "\t")}"
     assert_block(assertion_message) do
       exception_class === error && (message || //) === (error.message || '')
     end
-
-    error
+    return error
   end
   
   chain_call_variation_targets =  { :expects  => :mock,
