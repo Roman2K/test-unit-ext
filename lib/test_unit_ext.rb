@@ -27,6 +27,15 @@ module TestUnitExt
     return error
   end
   
+  def catch_error(type)
+    begin
+      yield
+    rescue => error
+    end
+    assert_kind_of(type, error)
+    return error
+  end
+  
   chain_call_variation_targets =  { :expects  => :mock,
                                     :stubs    => :stub  }
 
