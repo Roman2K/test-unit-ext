@@ -65,12 +65,17 @@ module TestUnitExt
   if defined?(ActiveRecord)
     # Details in the {introduction article}[http://roman.flucti.com/painless-record-creation-with-activerecord].
     def insert!(model, attributes={}, options={})
-      attributes = attributes.stringify_keys
+      attributes          = attributes.stringify_keys
+      trigger_validation  = options.fetch(:trigger_validation, false)
+      inhibit_callbacks   = options.fetch(:inhibit_callbacks, !trigger_validation)
       begin
         record = model.new { |record| record.send(:attributes=, attributes, false) }
-        if options.fetch(:inhibit_callbacks, true)
+        if inhibit_callbacks
           def record.callback(*args)
           end
+        end
+        if trigger_validation
+          record.valid?
         end
         record.save(false)
       rescue ActiveRecord::StatementInvalid

@@ -1,6 +1,6 @@
 require "echoe"
 
-Echoe.new('test-unit-ext', '0.1.0') do |p|
+Echoe.new('test-unit-ext', '0.1.1') do |p|
   p.description     = "Helper methods for Test::Unit::TestCase"
   p.url             = "https://github.com/Roman2K/test-unit-ext"
   p.author          = "Roman Le Négrate"
