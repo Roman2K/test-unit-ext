@@ -28,7 +28,7 @@ module TestUnitExt
     return error
   end
   
-  def catch_error(type)
+  def catch_error(type=Exception)
     begin
       yield
     rescue => error
