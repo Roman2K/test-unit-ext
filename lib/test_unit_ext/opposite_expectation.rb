@@ -2,22 +2,22 @@ module TestUnitExt::OppositeExpectation
   # Usage example:
   #
   #   host = Host.new
-  #   mock_chain(host, 'portage.install').returns :success
+  #   expects_chain(host, 'portage.install').returns :success
   #   
   #   host.portage.install  # => :success
   #
-  def mock_chain(obj, chain)
+  def expects_chain(obj, chain)
     stub_chain_for_object_with(:expects, :mock, obj, chain)
   end
   
   # Usage example:
   #
   #   host = Host.new
-  #   stub_chain(host, 'portage.installed?').returns false
+  #   stubs_chain(host, 'portage.installed?').returns false
   #   
   #   host.portage.installed?   # => false
   #
-  def stub_chain(obj, chain)
+  def stubs_chain(obj, chain)
     stub_chain_for_object_with(:stubs, :stub, obj, chain)
   end
   

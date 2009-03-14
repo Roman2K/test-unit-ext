@@ -15,7 +15,7 @@ module TestUnitExt::QueryCountAssertions
   end
 
   # Extracted from activerecord/lib/active_record/test_case.rb
-  def assert_queries(num = 1)
+  def assert_queries(num=1)
     $queries_executed = []
     yield
   ensure

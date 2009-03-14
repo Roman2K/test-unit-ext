@@ -2,13 +2,21 @@
 
 Helper methods for `Test::Unit::TestCase`. See the documentation of each method for a description and usage examples.
 
+## Installation
+
+    gem install Roman2K-test-unit-ext -s http://gems.github.com/
+
 ## Usage
 
 In `test_helper.rb` or any particular test file:
 
     require 'test_unit_ext'
+    
+    Test::Unit::TestCase.class_eval do
+      include TestUnitExt
+    end
 
-If you are using [Mocha](http://mocha.rubyforge.org/), be sure to `require` it before `TestUnitExt`.
+If you are using [Mocha](http://mocha.rubyforge.org/), be sure to `require 'mocha'` first.
 
 ## Credits
 
