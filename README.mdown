@@ -4,7 +4,7 @@ Helper methods for `Test::Unit::TestCase`. See the documentation of each method 
 
 ## Installation
 
-    gem install Roman2K-test-unit-ext -s http://gems.github.com/
+    $ gem install Roman2K-test-unit-ext -s http://gems.github.com/
 
 ## Usage
 
