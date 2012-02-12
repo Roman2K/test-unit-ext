@@ -20,6 +20,5 @@ If you are using [Mocha](http://mocha.rubyforge.org/), be sure to `require 'moch
 
 ## Credits
 
-* Written by [Roman Le Négrate](http://roman.flucti.com) ([contact](mailto:roman.lenegrate@gmail.com)).
-* Portions (`assert_queries` and related code) by [David Heinemeier Hansson](http://loudthinking.com).
-* Released under the MIT license: see the `LICENSES` file.
+* Roman Le Négrate
+* [David Heinemeier Hansson](http://loudthinking.com) - `#assert_queries`
