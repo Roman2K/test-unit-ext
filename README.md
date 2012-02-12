@@ -2,10 +2,6 @@
 
 Helper methods for `Test::Unit::TestCase`. See the documentation of each method for a description and usage examples.
 
-## Installation
-
-    $ gem install Roman2K-test-unit-ext -s http://gems.github.com/
-
 ## Usage
 
 In `test_helper.rb` or any particular test file:
